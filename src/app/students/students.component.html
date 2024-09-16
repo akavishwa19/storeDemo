@@ -1,0 +1,40 @@
+<button (click)="add({name:'akash',age:10})">Add student 1</button>
+<button (click)="add({name:'suhash',age:10})">Add student 2</button>
+<button (click)="add({name:'dona',age:10})">Add student 3</button>
+<button (click)="add({name:'janak',age:10})">Add student 4</button>
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            NAME
+        </th>
+        <th>
+            AGE
+        </th>
+        <th>
+            EDIT
+        </th>
+        <th>
+            DELETE
+        </th>
+    </tr>
+    <tr *ngFor="let student of arr">
+        <td>
+            {{student.id}}
+        </td>
+        <td>
+            {{student.name}}
+        </td>
+        <td>
+            {{student.age}}
+        </td>
+        <td>
+           <button (click)="edit(student.id)" >EDIT</button>
+        </td>
+        <td>
+            <button (click)="delete(student.id)">DELETE</button>
+        </td>
+    </tr>
+</table>
